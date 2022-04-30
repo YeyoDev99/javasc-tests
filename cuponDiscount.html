@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento con cupones</title>
+    <meta name="description" content="descuentos por medio de cupones">
+</head>
+<body>
+    <h1>descuentos con cupones</h1>
+    <section>
+        <h2>poly station</h2>
+        <h3>precio:<br> $15000 </h3>
+        <form action="">
+            <label for="polystationCupon"></label>
+            <span>selecciona el cupon de descuento</span>
+            <input list="cupones" id="polystationCupon">
+            <datalist id="cupones">
+                <option value="primera-compra"></option>
+                <option value="doble-compra"></option>
+                <option value="premio-bolos"></option>
+                <option value="premio-baile"></option>
+            </datalist>
+            <button type="button" onclick="cuponDiscount()">
+                calcular descuento
+            </button>
+        </form>
+        <p id="popDiscount"></p>
+    </section>
+<script src="./cuponDiscount.js"></script>    
+</body>
+</html>
