@@ -8,10 +8,11 @@ function calcularAlturaIsosceles(side1, side2, base){
         const b2 = b1**2
         const c = a1 - b2
         const isoscelesResult = Math.sqrt(c)
-        alert(isoscelesResult)        
+        return isoscelesResult        
     }
     else {
-        alert("no es un triangulo isosceles")
+        const trianguloAlturaDenial = document.getElementById("trianguloAlturaDenial")
+        trianguloAlturaDenial.innerText = "no es un triangulo isosceles"
     }
 }
 
@@ -24,7 +25,8 @@ function alturaIsosceles(){
     const side2Value = side2Input.value
     const baseValue = baseInput.value
     const altura = calcularAlturaIsosceles(side1Value, side2Value, baseValue)
-    alert(altura)
+    const alturaResult = document.getElementById("trianguloAlturaResult")
+    alturaResult.innerText = "la altura del triangulo isosceles es " + altura + " cm"
 }
 console.groupEnd()
 // triangulo isosceles area
@@ -39,10 +41,11 @@ function calcularAreaIsosceles(side1Area, side2Area, baseArea){
         const c = a1 - b2
         const isoscelesResult = Math.sqrt(c)
         const isoscelesResultArea = isoscelesResult * baseArea / 2
-        alert(isoscelesResultArea)
+        return isoscelesResultArea
     }
     else {
-        alert("no es un triangulo isosceles")
+        const trianguloAreaDenial = document.getElementById("trianguloAreaDenial")
+        trianguloAreaDenial.innerText = "no es un triangulo isosceles"
     }
 }
 
@@ -55,7 +58,8 @@ function areaIsosceles(){
     const side2Value = side2Input.value
     const baseValue = baseInput.value
     const area = calcularAreaIsosceles(side1Value, side2Value, baseValue)
-    alert(area)
+    const trianguloAreaResult = document.getElementById("trianguloAreaResult")
+    trianguloAreaResult.innerText = "el area del triangulo isosceles es " + area + " cm^2" 
 }
 console.groupEnd()
 // circulo perimetro
@@ -66,7 +70,7 @@ const PiValue = Math.PI
 
 function calcularPerimetroCirculo(radio){
     const perimetroCirculoResult= radio * 2 * PiValue
-    alert(perimetroCirculoResult)
+    return perimetroCirculoResult
 }
 
 
@@ -74,7 +78,8 @@ function perimetroCirculo(){
     const radioInput = document.getElementById("circleRadio")
     const radioValue = radioInput.value
     const perimetroCirculoResultado = calcularPerimetroCirculo(radioValue)
-    alert(perimetroCirculoResultado)  
+    const circlePerimetroResult = document.getElementById("circlePerimetroResult")
+    circlePerimetroResult.innerText = "el perimetro del circulo es " + perimetroCirculoResultado + " cm" 
 }
 console.groupEnd()
 
@@ -84,7 +89,7 @@ console.group("circulo-area")
 
 function calcularAreaCirculo(radio){
     const areaCirculoResult= radio**2 * PiValue
-    alert(areaCirculoResult)
+    return areaCirculoResult
 }
 
 
@@ -92,7 +97,8 @@ function areaCirculo(){
     const radioInput = document.getElementById("circleArea")
     const radioValue = radioInput.value
     const areaCirculoResultado = calcularAreaCirculo(radioValue)
-    alert(areaCirculoResultado)  
+    const circleAreaResult = document.getElementById("circleAreaResult")
+    circleAreaResult.innerText = "el area del circulo es " + areaCirculoResultado + " cm^2" 
 }
 console.groupEnd()
 
